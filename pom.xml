@@ -2,12 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.0.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
     <groupId>com.bricks</groupId>
     <artifactId>base</artifactId>
     <version>1.0.0</version>
@@ -30,6 +24,7 @@
                         <artifactId>spring-boot-starter-logging</artifactId>
                     </exclusion>
                 </exclusions>
+                <version>2.3.0.RELEASE</version>
             </dependency>
 
             <dependency>
@@ -42,6 +37,14 @@
                         <artifactId>junit-vintage-engine</artifactId>
                     </exclusion>
                 </exclusions>
+                <version>2.3.0.RELEASE</version>
+            </dependency>
+
+            <!--Spring boot WEB-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>2.3.0.RELEASE</version>
             </dependency>
 
             <!--lombok-->
@@ -55,7 +58,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-log4j2</artifactId>
-                <version>2.1.2.RELEASE</version>
+                <version>2.2.5.RELEASE</version>
             </dependency>
 
             <!--Swagger OpenAPI-->
@@ -130,6 +133,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.3.0.RELEASE</version>
             </plugin>
         </plugins>
     </build>
