@@ -1,7 +1,12 @@
 package com.bricks.controller.login;
 
+import com.bricks.common.result.ResultCodeEnum;
+import com.bricks.common.result.ResultResponse;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,20 +18,19 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @Slf4j
+@Api(tags = "登录/登出")
 public class Login {
 
     @PostMapping("/login")
-    public String login() {
-        log.debug("调试登录");
-        log.info("登录");
-        return "登录";
+    @ApiOperation(value = "登录")
+    public ResultResponse login() throws InterruptedException {
+        return new ResultResponse(ResultCodeEnum.succeed,null);
     }
 
     @GetMapping("/loginOut")
-    public String loginOut() {
-        log.warn("登出");
-        log.error("异常登出");
-        return "注销";
+    @ApiOperation(value = "登出")
+    public ResultResponse loginOut() {
+        return new ResultResponse(ResultCodeEnum.succeed,null);
     }
 
 }

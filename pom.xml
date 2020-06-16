@@ -8,12 +8,28 @@
     <name>bricks</name>
     <description>Demo project for Spring Boot</description>
 
+    <modules>
+        <module>common</module>
+        <module>controller</module>
+    </modules>
+
     <properties>
         <java.version>1.8</java.version>
+        <spring.version>2.3.0.RELEASE</spring.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.bricks</groupId>
+                <artifactId>common</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.bricks</groupId>
+                <artifactId>pojo</artifactId>
+                <version>1.0.0</version>
+            </dependency>
             <!--Spring boot-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -24,7 +40,7 @@
                         <artifactId>spring-boot-starter-logging</artifactId>
                     </exclusion>
                 </exclusions>
-                <version>2.3.0.RELEASE</version>
+                <version>${spring.version}</version>
             </dependency>
 
             <dependency>
@@ -37,21 +53,28 @@
                         <artifactId>junit-vintage-engine</artifactId>
                     </exclusion>
                 </exclusions>
-                <version>2.3.0.RELEASE</version>
+                <version>${spring.version}</version>
             </dependency>
 
             <!--Spring boot WEB-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-                <version>2.3.0.RELEASE</version>
+                <version>${spring.version}</version>
             </dependency>
 
             <!--Spring boot AOP-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-aop</artifactId>
-                <version>2.3.0.RELEASE</version>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <!-- Spring boot Security-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-security</artifactId>
+                <version>${spring.version}</version>
             </dependency>
 
             <!--lombok-->
